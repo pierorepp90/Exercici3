@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exercici 3 Fase 4</title>
+</head>
+<body>
+
+<p id="output"></p>
+
+<script>
+
+var ciutat1, ciutat2, ciutat3, ciutat4, ciutat5, ciutat6;
+
+ciutat1 = prompt("Please enter the name of the city: ");
+ciutat2 = prompt("Please enter the name of the city: ");
+ciutat3 = prompt("Please enter the name of the city: ");
+ciutat4 = prompt("Please enter the name of the city: ");
+ciutat5 = prompt("Please enter the name of the city: ");
+ciutat6 = prompt("Please enter the name of the city: ");
+
+var cities = [ciutat1, ciutat2, ciutat3, ciutat4, ciutat5, ciutat6];
+
+var invertedCities = [];
+
+
+
+for(i = 0; i < cities.length; i++){
+	var invertedCity = [];
+	for(c = cities[i].length - 1; c >= 0; c--){
+		d = cities[i].length - 1 - c;
+		invertedCity[d] = cities[i].charAt(c);
+	}
+	invertedCities[i]=invertedCity;
+	
+}
+
+document.getElementById("output").innerHTML = invertedCities.toString();
+</script>
+</body>
+</html>
